@@ -1,0 +1,247 @@
+/* ========================= Main ========================= */
+/* set the background of the whole body to white color and with no margin */
+body { 
+    background-color: white; 
+    margin: 0; 
+}
+
+/* define the grid area for each class selector */
+.menu { grid-area: menu; }
+.header { grid-area: header; }
+.left { grid-area: left; }
+.right { grid-area: right; }
+.middle { grid-area: middle; }
+.contact { grid-area: contact; }
+.footer { grid-area: footer; }
+
+/* set the grid-container to display as a grid and placing grid item using area name */
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'menu menu menu menu menu menu'
+    'header header header header header header'
+    'left left left left right right'
+    'middle middle middle middle middle middle'
+    'contact contact contact contact contact contact'
+    'footer footer footer footer footer footer';
+}
+
+/* set the child of grid-container to have a center text align and a font size of 18px  */
+.grid-container > div {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* set all elements of tag a with no text-decoration (underline) and in black color as by default is underlined and in blue color */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* set all elements of tag a to change font color to blue when mouse hover on it */
+a:hover, a.menu-link:hover {
+    color: rgb(57, 181, 222);
+}
+
+/* ========================= Menu ========================= */
+/* set the menu with height of 70px and flexbox layout to easily arrange between link box and logo box with items align in center and space evenly */
+.menu {
+    width: auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* set the elements of tag a in menu-link to grey color for styling */
+a.menu-link {
+    color: grey;
+}
+
+/* set the links with flexbox layout in menu to easily arrange between links */
+.links {
+    display: flex;
+    font-size: 17px;
+    gap: 1rem;
+}
+
+/* set the image of the logo with height of 70px */
+.logo {
+    height: 70px;
+}
+
+/* ===================== Left & Right ===================== */
+/* set the left container to have a padding of 5% of the screen width on the left to avoid stick to the side of the page */
+.left {
+    width: 90%; 
+    padding-left: 5%;       
+}
+
+/* set the right container to have a padding of 5% of the screen width on the right */
+.right {
+    width: 90%; 
+    padding-right: 5%;          
+}
+
+/* set all header in flexbox so that the line can stay after the header */
+.left-header, .right-header, .middle-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+/* draw the line after the header */
+.underline {
+    width: 100%;
+    height: .5px;
+    background-color: lightgray;
+}
+
+/* set the intro/welcome speech to have a justify text align for clean and tidy page */
+.left-content {
+    text-align: justify;
+}
+
+/* set the right content to align on the left as the text had set to center align at top */
+.right-content {
+    text-align: left;
+}
+
+/* set the description of the right content to grey color for styling */
+small {
+    color: grey;
+}
+
+/* set the profile picture to float to the left so that the text can stay beside of the picture */
+.profilePic {
+    width: 200px;
+    float: left;
+}
+
+/* ======================== Middle ======================== */
+/* set the middle content to have a padding of 5% of the screen width on the left as same as left content */
+.middle {
+    width: 90%;
+    padding-left: 5%; 
+    padding-bottom: 20px;    
+}
+
+/* set the research content in inline-block to stay side-by-side */
+.research {
+    width: 30%; /* 30% for equally sharing of place between 3 research paper*/
+    border: 1px solid lightgray;
+    display: inline-block;
+    position: relative;
+}
+
+/* set the image of the research paper to height of 200px */
+.researchImage {
+    width: 100%;
+    height: 200px;
+    transition: opacity 0.1s;
+}
+
+/* set the image transition from opacity 1 to opacity 0.2 in 0.1s when mouse hover on it */
+.researchImage:hover {
+    opacity: 0.2;
+}
+
+/* ======================== Contact ======================== */
+/* set the contact area with height 300px, navy blue background and with flexbox layout to easily arrange between image and contact info and other for styling purpose */
+.contact {
+    width: 100%;
+    background-color: rgb(0, 0, 39);
+    height: 300px;
+    display: flex;
+    justify-content: left;
+    align-items:center;
+}
+
+/* set the image to have a width of 60% of the screen width and place it after a padding of 20% of the screen width */
+.contactImage {
+    padding-left: 15%;
+    width: 60%;
+    height: auto;
+}
+
+/* set the contact info with padding of 5% of the screen width after the contact image */
+.contactInfo {
+    color: white;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 5%;
+}
+
+/* set the word 'contact' to grey color as by default is black */
+h3.contactTitle {
+    color: #919191;
+}
+
+/* set the contact email to white as the tag a element had set to black color at top */
+a.contactEmail {
+    color: white;
+}
+
+/* set the contact email to have a grey background when mouse hover on it */
+a.contactEmail:hover {
+    background-color: #919191;
+}
+
+/* ======================== Footer ======================== */
+/* set the footer with height of 150px and navy blue background */
+.footer {
+    width: 100%;
+    height: 150x;
+    background-color: rgb(3, 3, 66);
+}
+
+/* set the footer text to white color, font size of 12px, left align and a padding of 10% of the screen width on the left */
+.footerText {
+    color: white;
+    font-size: 12px;
+    padding-left: 10%;
+    text-align: left;
+}
+
+/* ================= Responsive Web Design ================= */
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'menu'
+        'header'
+        'left'
+        'right'
+        'middle'
+        'contact'
+        'footer';
+    }
+
+    /* set the right container to have a padding of 5% of the screen width on the left to avoid stick to the side of the page after being responsive */
+    .right {
+        padding-left: 5%;
+    }
+
+    /* set the research papers to stack vertically */
+    .research {
+        width: 100%;
+        display: block;
+        padding-bottom: 20px;
+    }
+
+    /* set the contact area to stack vertically */
+    .contact {
+        padding-top: 5%;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .contactImage, .contactInfo {
+        padding-left: 0%;
+    }
+}

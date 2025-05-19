@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- To create a responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>WEBP Asgm2 - Jane Ng</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- a div as a container that cover the whole page -->
+    <div class="grid-container">
+        <!-- Menu - a div as a container for menu -->
+        <div class="menu">
+            <div class="links">
+                <div><a class="menu-link" href="index.html">Home</a></div>
+                <div><a class="menu-link" href="#research">Research</a></div>
+                <div><a class="menu-link" href="docs/Resume.pdf">About Me</a></div>
+                <div><a class="menu-link" href="#contactMe">Contact Me</a></div>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/UTMLogo.png" media="(max-width: 600px)">
+                    <source srcset="img/Logo.png">
+                    <img class="logo" src="img/Logo.png" alt="UTM Logo" title="UTM Logo"/>
+                </picture>
+            </div>
+        </div>
+
+        <!-- Header - a div as a container for header -->
+        <div class="header">
+            <img src="img/Banner.jpg" alt="Jane Welcome Banner" title="Jane Welcome Banner" width="100%"/>
+        </div>
+
+        <!-- Left - a div as a container for left content -->
+        <div class="left">
+            <div class="left-header">
+                <h2>Welcome</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="left-content">
+                <img src="img/Jane.JPG" alt="Jane Profile Pic" title="Jane Profile Pic" width="250px" class="profilePic"/>
+                <p>Hi! I am <b>Jane</b>, a dedicated second-year Computer Science student with a specialization in Bioinformatics at the University of 
+                    Technology Malaysia (UTM). I am passionate about using technology to solve complex problems across different fields. Throughout my 
+                    academic journey, I have developed a strong foundation in programming languages such as C++, Java, HTML and CSS with a keen interest 
+                    in applying these skills to various aspects of technology and software development. I actively engage in extracurricular activities 
+                    to expand my knowledge and network with like-minded individuals. I am looking forward to exploring opportunities that merge computer 
+                    science with life sciences to drive innovation and make a meaningful impact. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Right - a div as a container for right content -->
+        <div class="right">
+            <div class="right-header">
+                <h3>My Tech Toolkit</h3>
+                <div class="underline"></div>
+            </div>
+            <div class="right-content">
+                <div>
+                    <small>A collaborative web application for interface design</small><br>
+                    ❀ <a href="https://www.figma.com/">Figma</a>
+                </div><br>
+                <div>
+                    <small>A platform that provides computer science resources and coding challenges</small><br>
+                    ❀ <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a>
+                </div><br>
+                <div>
+                    <small>A platform for developers to create, store, manage and share their code</small><br>
+                    ❀ <a href="https://github.com/">GitHub</a>
+                </div><br>
+                <div>
+                    <small>A web-based list-making application</small><br>
+                    ❀ <a href="https://trello.com/">Trello</a>
+                </div><br>
+                <div>
+                    <small>A freemium educational website for learning coding online</small><br>
+                    ❀ <a href="https://www.w3schools.com/">w3schools</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle - a div as a container for middle content -->
+        <div class="middle">
+            <div class="middle-header">
+                <h2 id="research">Research</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="research-container">
+                <article class="research">
+                    <a href="docs/Comparative Evaluation of Websites.pdf">
+                        <img class="researchImage" src="img/Research.jpg" alt="">
+                    </a>
+                    <p><a href="docs/Future of Agriculture.pdf">Comparative Evaluation of Websites</a></p>
+                </article>
+                <article class="research">
+                    <a href="docs/DNA Cloning.pdf">
+                        <img class="researchImage" src="img/DNA.jpg" alt="">
+                    </a>
+                    <p><a href="docs/Future of Agriculture.pdf">DNA Cloning</a></p>
+                </article>
+                <article class="research">
+                    <a href="docs/Future of Agriculture.pdf">
+                        <img class="researchImage" src="img/FutureOfAgriculture.jpg" alt="">
+                    </a>
+                    <p><a href="docs/Future of Agriculture.pdf">Future of Agriculture</a></p>
+                </article>
+            </div>            
+        </div>
+
+        <!-- Contact - a div as a container for contact -->
+        <div class="contact" id="contactMe">
+            <div>
+                <img class="contactImage" src="img/facultyOfComputing.jpg" alt="Faculty of Computing" title="UTM Faculty of Computing"/>
+            </div>
+            <div class="contactInfo">
+                <h3 class="contactTitle">Contact</h3>			
+                <div>
+                    <p class>
+                        Jane Ng Jing Ying<br>
+                        Faculty of Computing<br>
+                        Universiti Teknologi Malaysia<br>
+                        81310 UTM Johor Bahru<br>
+                        Johor, Malaysia<br>
+                        <a class="contactEmail" href="mailto:jane@graduate.utm.my">jane@graduate.utm.my</a>
+                    </p>
+                    <p>Phone: 014-361 1706</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer - a div as a container for footer -->
+        <div class="footer"> 
+            <p class="footerText">© Copyright - Jane Ng Jing Ying</p>
+        </div>
+    </div>
+</body>
+</html>
